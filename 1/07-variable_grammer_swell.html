@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.更新变量 下面的变量值覆盖上面的值
+        var myname='pink';
+        console.log(myname);
+        myname = '迪丽热巴';
+        console.log(myname);
+        // 2.声明多个变量
+        var age = 18 , 
+            address = '火影村',
+            salary = '2000';
+
+        //3.声明变量的特殊情况
+        // 3.1只声明不赋值 结果是？
+        var sex;
+        console.log(sex);  //结果输出 undefined
+
+        //3.2 不声明不赋值 直接使用某个变量会报错
+        // console.log(tell);
+
+        //3.3不声明直接复制使用
+        qq = 110;
+        console.log(qq); //可以使用，不提倡
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
