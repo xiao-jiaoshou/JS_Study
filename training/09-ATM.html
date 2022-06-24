@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script>
+            var sum = 0; //余额
+            var save = 0; //存钱
+            var draw = 0; //取钱
+            var cont = 1; //循环判断
+            var opt = 0; //操作选择
+            while( cont == 1 ){
+                opt = prompt('请输入您的操作：' + '\n' + '1.存钱' +'\n' + '2.取钱' + '\n' + '3.显示余额' + '\n' + '4.退出');
+                //opt接收键盘的数字是字符，要转换为数字
+                switch( Number(opt) ){
+                    case 1: 
+                        save = prompt('请输入您的存入金额');
+                        //save接收键盘的数字是字符，要转换为数字
+                        sum += Number(save);
+                        break;     
+                    case 2: 
+                        draw = prompt('请输入您的取出金额');
+                        if(sum - Number(draw) >= 0)sum -= Number(draw);
+                        else alert('您的余额仅有：' + sum);
+                        break;
+                    case 3:
+                        alert( '您的余额为' + sum );
+                        break;
+                    case 4:
+                        alert('您正在退出！');
+                        cont = 0;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
