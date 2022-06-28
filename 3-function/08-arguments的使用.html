@@ -22,7 +22,18 @@
         // 1. 具有数组的length 属性
         // 2. 按照索引号的方式存储
         // 3. 它没有正整数组的一些方法 pop() push() 等等
-        
+
+
+        // 求任意多个数字的最大值
+        function getMax(){
+            var max = arguments[0];
+            for(var i =0; i < arguments.length; i++){
+                if(arguments[i] > max) max = arguments[i];
+            }
+            return max;
+        }
+        console.log(getMax(100,2,32,));
+        console.log(getMax(15,29));
     </script>
 </head>
 <body>
