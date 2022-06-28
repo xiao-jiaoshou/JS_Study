@@ -6,19 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>接收用户输入的用户名和密码 若用户名为"admin" 密码为123456 则提示用户登录成功 否则一直输入</title>
+
+</head>
+
+<body>
     <script>
         var name = prompt('请输入您的用户名');
         var num = prompt('请输入您的密码');
-        while (name != 'admin' || num != '123456')
-        {
+        while (name != 'admin' || num != '123456') {
             name = prompt('请输入您的用户名');
             num = prompt('请输入您的密码');
         } 
     </script>
-</head>
-
-<body>
-
 </body>
 
 </html>
