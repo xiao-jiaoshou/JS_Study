@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的作用域</title>
+</head>
+<body>
+    
+    <script>
+        // 作用域：代码在某个范围内起作用
+        // Global 全局作用域：作用于整个script标签内部 或 独立的js文件，全局变量
+        // Local 局部作用域：作用于函数内的代码环境，也叫函数作用域，函数内部的语句也可以用局部变量
+        // Block 块级作用域：{} 内有效  if、for语句里有{}，块级变量
+
+        // 变量的一个坑：无声明但赋值的变量，当做全局变量看，但是不推荐这种做法
+        function fn(){
+            // let num = 10; //局部变量
+            num = 10; //全局变量
+        }
+        fn();
+        console.log(num);
+
+        function fn2(x , y){
+            // 形参 x 和 y 可以看做是 局部变量
+            document.write(x + y);
+        }
+        fn(1 , 2);
+        // console.log(x); 错误了
+
+        let num = 10;
+        function fn3(){
+            let num = 20;
+            console.log(num);
+            //输出num = 10，就近原则：先查找当前作用域有没有num，再查找上一层作用域
+        }
+        fn()
+    </script>
+</body>
+</html>

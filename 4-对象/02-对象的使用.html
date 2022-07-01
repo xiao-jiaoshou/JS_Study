@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 对象是一种数据类型，无序的数据集合，可以详细地描述某个事物
+        // let 对象名 = {} 
+        // 对象由属性和方法组成，方法或叫行为
+        // let goods = {
+        //     name: '小米10青春版',
+        //     num: '100012816024',
+        //     weight: '0.55kg',
+        //     address: '中国大陆'
+        // }
+        // console.dir(goods)
+
+        // 声明人对象
+        let person = {
+            uname: '刘德华',
+            age: 18,
+            sex: '男',
+            // 方法名：function(){}
+            sayHi: function () {
+                console.log('hi~~~')
+            },
+            mtv: function (s) {
+                console.log(s)
+            }
+        }
+        // console.log(uname)
+        // 1. 访问属性  得到值   对象.属性名  (常用)
+        console.log(person.uname)
+        console.log(person.age)
+        // 2. 访问属性  得到值   对象['属性名'] (特定场景下只能用这个而不能用第一种)
+        console.log(person['sex'])
+        // 调用方法 对象.方法名()
+        person.sayHi()
+        person.mtv('无间道') //传参，此处为实参
+
+        // document.write()
+    </script>
+</body>
+
+</html>

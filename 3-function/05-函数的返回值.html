@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>函数内部要返回一个值给调用函数 才是合理的</title>
+    
+</head>
+
+<body>
+
     <script>
         // function 函数名（） {
         //     return 需要返回的结果;
@@ -17,13 +22,23 @@
         function getResult() {
             return 666;
         }
-        getResult(); //getResult() =666
-        console.log(getResult());
+        getResult(); //getResult() = 666
+        document.write(getResult() + '<br>');
 
         function cook(aru){
             return aru;
         }
-        console.log(cook('大肘子'));
+        document.write(cook('大肘子')+ '<br>');
+
+        // 求两个数的和
+        function getSum(x , y){
+            x = x || 0;
+            y = y || 0;
+            return x + y;
+        }
+        let sum = getSum(100 ,);
+        document.write(sum+ '<br>');
+        document.write(getSum(100 , 2) + '<br>');
 
         // 利用函数求两个数的最大值
         function getMax(num1,num2){
@@ -31,26 +46,23 @@
             // else return num2;
             return num1 > num2 ? num1 : num2;
         }
-        console.log(getMax(11,233));
+        document.write(getMax(11,233)+ '<br>');
 
         // 利用函数求数组中的最大值
         function getArrMax(arr){
-            var max = arr[0];
-            for(var i = 0; i < arr.length; i++){
+            let max = arr[0];
+            for(let i = 0; i < arr.length; i++){
                 if(arr[i] > max) max = arr[i];
             }
             return max;
         }
-        console.log(getArrMax([5,6,9,10,2,77]));
+        document.write(getArrMax([5,6,9,10,2,77]) + '<br>');
         // getArrMax([5,6,9,10,2,77]); 实参是一个数组送过去
         //在实际开发中 常用一个变量来接收 函数的返回结果
-        var re = getArrMax([5,6,142,10,2,77]);
-        console.log(re);
+        let re = getArrMax([5,6,142,10,2,77]);
+        document.write(`数组中的最大值是${re}` + '<br>');
+        document.write(`数组中的最大值是${re}  \n`);
     </script>
-</head>
-
-<body>
-
 </body>
 
 </html>

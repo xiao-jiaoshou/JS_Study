@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即执行函数</title>
+</head>
+<body>
+    
+    <script>
+        // 立即执行函数，用处：避免全局变量之间的污染
+        // 立即执行函数，立即执行，无需调用
+        // let fn = function() {}
+        // fn()
+        // 1.左边第一个括号放的是形参，第二个小括号放的是实参
+        // (function(){})()
+        // (function() {
+        //     console.log(111);
+        // }) ()
+        // (function (x , y){
+        //     console.log(x + y);
+        // })(1 , 2)
+
+        // let num = 10;
+        // (function(){
+
+        //     // 在立即执行函数里的num 和外面全局变量num 不冲突
+        //     let num = 20;
+
+
+        // })()
+
+        // 第二种写法：(function(){}())
+        // (function fn(num1 , num2){
+            
+        // }(num1 , num2))
+
+        // 注意：多个立即执行函数之间要用分号隔开,要不然会报错
+        (function(){
+            console.log(111);
+        })();
+        (function(){
+            console.log(222);
+        })();
+
+
+    </script>
+</body>
+</html>

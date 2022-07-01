@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换时间案例</title>
+</head>
+
+<body>
+
+    <script>
+        // 1.用户输入
+        let time = +prompt('请输入秒数');
+        // 2.计算时间 封装函数
+        function getTimes(t) {
+            let h = parseInt(time / 60 / 60 % 24);
+            let m = parseInt(time / 60 % 60);
+            let s = parseInt(time % 60);
+            h = h < 10? '0' + h : h;
+            // h < 10? '0' + h : h; 双击字母h，Ctrl+D可以选中同一行的h，然后再按字母m就把同行所有h替换成m
+            m = m < 10? '0' + m : m;
+            s = s < 10? '0' + s : s;
+            return `计算之后的时间是${h}时${m}分${s}秒`;
+            
+        }
+        // 3.打印输出
+        let str = getTimes(time);
+        document.write(str);
+    </script>
+</body>
+
+</html>

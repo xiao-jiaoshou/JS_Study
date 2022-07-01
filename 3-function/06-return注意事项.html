@@ -16,6 +16,7 @@
         // 2.return 只能返回一个值
         function fn(num1 , num2){
             return num1 , num2; //返回的结果是最后一个值
+            
         }
         console.log(fn(1,2)); 
 
@@ -23,8 +24,9 @@
         function getResult(num1, num2){
             return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
         }
-        var re = getResult(1,2); //返回的是一个数组
+        let re = getResult(1,2); //返回的是一个数组
         console.log(re);
+        
 
         // 4.如果函数有return 则返回的是return后面的值， 如果函数没有return 则返回undefined
         function fun1(){
@@ -35,6 +37,14 @@
 
         }
         console.log(fun2()); //返回undefined
+
+        /*
+            函数返回值的好处:
+                -对执行结果的扩展性更高，其他程序使用结果
+            return 后面不接数据或者函数内不写retur，函数的返回值默认为undefined
+            retur能立即结束当前函数，所以return后面的数据不要换行写
+                
+        */
     </script>
 </head>
 <body>
