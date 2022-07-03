@@ -18,12 +18,12 @@
         // for  in  循环语句
         // 语法
         // for (let k in 对象名) {}  重点
-        // k 变量   k  或者  key    value  
+        // k 是变量   k  或者  key    value  
         for (let k in obj) {
-            console.log(k)  // 属性名
-            // console.log(obj.k)  // obj.k 意思是 obj里面的k属性
-            // console.log(obj['k'])
-            console.log(obj[k])  // 属性值 
+            console.log(k)  // 输出属性名，所以k是属性名
+            //console.log(obj.k)  // obj.k 意思是 obj里面的k属性,obj里没有k属性，会输出undefined
+            // console.log(obj['k']) 
+            console.log(obj[k])  // 输出属性值，注意跟 obj['k'] 区分 
 
             // 为什么这么写？
             // k  ===  'uname'   === 'age'  === 'sex'

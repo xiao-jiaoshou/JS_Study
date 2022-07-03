@@ -29,7 +29,10 @@
             cursor: pointer;
         }
 
-        table tr:nth-child(1) {
+        /* table tr:nth-child(1) {
+            background-color: #ddd;
+        } */
+        table thead{
             background-color: #ddd;
         }
 
@@ -85,7 +88,9 @@
         <td>18</td>
         <td>男</td>
         <td>河北省</td>
-    </tr> -->
+    </tr> 
+    </table>
+-->
 
     <script>
         // 定义一个存储了若干学生信息的数组
@@ -98,21 +103,25 @@
         ]
 
         // 第一步 打印表格的头部和尾部
+        // tr 是行，th 是列
         document.write(`
          <table>
             <caption>学生列表</caption>
-            <tr>
+            <thead>
+            <tr> 
                 <th>序号</th>
                 <th>姓名</th>
                 <th>年龄</th>
                 <th>性别</th>
                 <th>家乡</th>
             </tr>
+            </head>
         `)
-        // 中间遍历行数  原则就是有几条数据，我就遍历几次
 
+        // 中间遍历行数  原则就是有几条数据，我就遍历几次
         for (let i = 0; i < students.length; i++) {
             document.write(`
+            <tbody>
             <tr>
                 <td>${i + 1}</td>
                 <td>${students[i].name}</td>
@@ -120,10 +129,9 @@
                 <td>${students[i].gender}</td>
                 <td>${students[i].hometown}</td>
             </tr>
+            </tbody>
             `)
         }
-
-
 
         // 尾部
         document.write(`
