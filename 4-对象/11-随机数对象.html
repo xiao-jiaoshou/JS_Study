@@ -10,17 +10,18 @@
 
 <body>
     <script>
-        // 求得是 N - M 之间的一个随机数公式
+        // 求 N - M 之间的一个随机数公式
         // let random = Math.floor(Math.random() * (10 - 1 + 1)) + 1
         // console.log(random)
         // 封装一个随机数函数  min 到  max  
         function getRandom(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min
+            return Math.floor(Math.random() * (max - min + 1)) + 1 
         }
         let random = getRandom(1, 10)
         console.log(random)
         let random1 = getRandom(1, 50)
         console.log(random1)
+        
     </script>
 </body>
 
